@@ -29,7 +29,8 @@ After(async function (this: ICustomWorld) {
   await this.context?.close();
 });
 
-AfterAll(async function () {
+AfterAll(async () => {
+  console.log("Close Browser");
   await browser.close();
 });
 

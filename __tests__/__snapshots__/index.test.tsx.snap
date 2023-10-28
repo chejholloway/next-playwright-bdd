@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomePage> should render component 1`] = `
+<DocumentFragment>
+  <div>
+    <h1
+      class="text-3xl font-bold underline"
+    >
+      Hello world!
+    </h1>
+    <div
+      class="count"
+    >
+      <h1
+        data-testid="counter-text"
+      >
+        Count: 0
+      </h1>
+    </div>
+    <div
+      class="app"
+    >
+      <div
+        class="buttons"
+      >
+        <button
+          data-testid="decrease"
+          title="-"
+          type="button"
+        >
+          -
+        </button>
+        <button
+          data-testid="increase"
+          title="+"
+          type="button"
+        >
+          +
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
