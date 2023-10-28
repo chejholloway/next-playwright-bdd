@@ -20,7 +20,12 @@
     ".gitignore": true,
     ".prettierrc": true,
     "postcss.config.js": true,
-    "tsconfig.json": true
+    "tsconfig.json": true,
+    ".swc/plugins/v7_windows_x86_64_0.104.3": true,
+    ".swc/plugins": true,
+    ".swc": true,
+    "jest.config.js": true,
+    "jest.setup.js": true
   },
   "hide-files.files": [
     ".next",
@@ -37,7 +42,12 @@
     ".gitignore",
     ".prettierrc",
     "postcss.config.js",
-    "tsconfig.json"
+    "tsconfig.json",
+    ".swc/plugins/v7_windows_x86_64_0.104.3",
+    ".swc/plugins",
+    ".swc",
+    "jest.config.js",
+    "jest.setup.js"
   ],
   "conventionalCommits.scopes": [
     "global"

@@ -1,5 +1,6 @@
 import { ICustomWorld } from './custom-world';
-import { ChromiumBrowser, chromium } from '@playwright/test';
+import { chromium, Browser } from '@playwright/test';
+
 import {
   After,
   AfterAll,
@@ -9,7 +10,7 @@ import {
   Status,
 } from '@cucumber/cucumber';
 
-let browser: ChromiumBrowser;
+let browser: Browser;
 
 BeforeAll(async function () {
   browser = await chromium.launch({ headless: false });
