@@ -12,7 +12,6 @@
     "public": true,
     "tests/reports": true,
     "pnpm-lock.yaml": true,
-    "tsconfig.json": true,
     "README.md": true,
     "playwright.config.ts": true,
     "next-env.d.ts": true,
@@ -20,7 +19,9 @@
     "htmlReportGenerator.js": true,
     ".gitignore": true,
     ".prettierrc": true,
-    "postcss.config.js": true
+    "postcss.config.js": true,
+    "tailwind.config.js": true,
+    "tsconfig.json": true
   },
   "hide-files.files": [
     ".next",
@@ -29,7 +30,6 @@
     "public",
     "tests/reports",
     "pnpm-lock.yaml",
-    "tsconfig.json",
     "README.md",
     "playwright.config.ts",
     "next-env.d.ts",
@@ -37,7 +37,9 @@
     "htmlReportGenerator.js",
     ".gitignore",
     ".prettierrc",
-    "postcss.config.js"
+    "postcss.config.js",
+    "tailwind.config.js",
+    "tsconfig.json"
   ],
   "conventionalCommits.scopes": [
     "global"
