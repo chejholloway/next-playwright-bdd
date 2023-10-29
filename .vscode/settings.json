@@ -24,7 +24,10 @@
     ".swc/plugins": true,
     ".swc": true,
     "jest.config.js": true,
-    "jest.setup.js": true
+    "jest.setup.js": true,
+    ".husky": true,
+    "tsconfig.json": true,
+    "withTwin.js": true
   },
   "hide-files.files": [
     ".next",
@@ -45,7 +48,13 @@
     ".swc/plugins",
     ".swc",
     "jest.config.js",
-    "jest.setup.js"
+    "jest.setup.js",
+    ".husky",
+    "tsconfig.json",
+    "withTwin.js"
   ],
-  "conventionalCommits.scopes": ["global"]
+  "conventionalCommits.scopes": [
+    "global",
+    "tests"
+  ]
 }

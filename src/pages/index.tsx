@@ -1,7 +1,10 @@
-import { useState } from 'react';
-import tw from 'twin.macro';
+/* eslint-disable react/display-name */
+import React, { useState } from 'react';
+import 'twin.macro';
 
-const Column = tw.div`flex flex-col justify-center h-full gap-y-5`;
+const HelloWorld = React.memo(() => (
+  <h1 tw="text-3xl font-bold underline">Hello world!</h1>
+));
 
 function HomePage() {
   const [count, setCount] = useState(0);
@@ -15,31 +18,42 @@ function HomePage() {
     setCount(count - 1);
   };
 
-  return (
-    <Column>
-      <h1 tw="text-3xl font-bold underline">Hello world!</h1>
-      <h1 data-testid="counter-text">Count: {count}</h1>
-      <div className="app">
-        <div className="buttons">
-          <button
-            type="button"
-            data-testid="decrease"
-            title="-"
-            onClick={decrementCount}
-          >
-            -
-          </button>
-          <button
-            type="button"
-            data-testid="increase"
-            title="+"
-            onClick={incrementCount}
-          >
-            +
-          </button>
-        </div>
+  const Count = React.memo(() => (
+    <h1 data-testid="counter-text">Count: {count}</h1>
+  ));
+
+  const IncrementButton = React.memo(() => (
+    <button
+      type="button"
+      data-testid="increase"
+      title="+"
+      onClick={incrementCount}
+    >
+      +
+    </button>
+  ));
+
+  const DecrementButton = React.memo(() => (
+    <button
+      type="button"
+      data-testid="decrease"
+      title="-"
+      onClick={decrementCount}
+    >
+      -
+    </button>
+  ));
+  const App = React.memo(() => (
+    <div className="app">
+      <HelloWorld />
+      <Count />
+      <div className="buttons">
+        <DecrementButton />
+        <IncrementButton />
       </div>
-    </Column>
-  );
+    </div>
+  ));
+
+  return <App />;
 }
 export default HomePage;

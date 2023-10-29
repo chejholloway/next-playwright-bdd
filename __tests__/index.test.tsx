@@ -1,8 +1,5 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-
-import tw from 'twin.macro';
-
 import HomePage from '../src/pages/index';
 
 describe('HomePage', () => {
@@ -36,10 +33,10 @@ describe('HomePage', () => {
 
     // Click the decrease button and check if count decreases
     fireEvent.click(decreaseButton);
-    expect(screen.getByText('Count: 0')).toBeTruthy();
+    expect(counterText.textContent).toBe('Count: 0');
 
     // Click the decrease button again and check if count doesn't go below 0
     fireEvent.click(decreaseButton);
-    expect(screen.getByText('Count: 0')).toBeTruthy();
+    expect(counterText.textContent).toBe('Count: 0');
   });
 });
