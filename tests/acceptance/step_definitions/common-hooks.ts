@@ -31,7 +31,7 @@ After(async function (this: ICustomWorld) {
 });
 
 AfterAll(async () => {
-  console.log("Close Browser");
+  console.log('Close Browser');
   await browser.close();
 });
 

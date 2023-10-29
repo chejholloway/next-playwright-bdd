@@ -9,22 +9,28 @@
     "lint": "next lint",
     "test": "jest --watchAll=false --verbose ./__tests__",
     "test:e2e": "npx cucumber-js && node ./htmlReportGenerator.js",
-    "prettier": "prettier . --write",
+    "format": "prettier . --write",
     "pre-commit": "npm run lint",
-    "pre-push": "npm run test",    
+    "pre-push": "npm run test",
     "prepare": "husky install"
   },
   "dependencies": {
+    "@emotion/css": "^11.11.2",
+    "@emotion/react": "^11.11.1",
+    "@emotion/server": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
     "@material-tailwind/react": "^2.1.4",
     "eslint-config-next": "14.0.0",
     "next": "14.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "styled-components": "^6.1.0"
+    "styled-components": "^6.1.0",
+    "twin.macro": "^3.4.0"
   },
   "devDependencies": {
     "@babel/plugin-syntax-typescript": "^7.22.5",
     "@cucumber/cucumber": "^10.0.1",
+    "@emotion/babel-plugin": "^11.11.0",
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "@playwright/test": "^1.39.0",
     "@testing-library/jest-dom": "^6.1.4",
@@ -60,7 +66,11 @@
     "prettier-plugin-tailwindcss": "^0.5.6",
     "tailwindcss": "^3.3.5",
     "ts-node": "^10.9.1",
-    "twin.macro": "^3.4.0",
     "typescript": "^5.2.2"
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "emotion"
+    }
   }
 }

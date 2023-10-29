@@ -1,20 +1,20 @@
-// src/styles/GlobalStyles.tsx
-import React from 'react'
-import { createGlobalStyle } from 'styled-components'
-import tw, { theme, GlobalStyles as BaseStyles } from 'twin.macro'
+import { Global, css } from '@emotion/react';
+import tw, { theme, GlobalStyles as BaseStyles } from 'twin.macro';
 
-const CustomStyles = createGlobalStyle({
-    body: {
-        WebkitTapHighlightColor: theme`colors.purple.500`,
-        ...tw`antialiased`,
-    },
-})
+const customStyles = css({
+  body: {
+    WebkitTapHighlightColor: theme`colors.purple.500`,
+    ...tw`antialiased`,
+  },
+});
 
-const GlobalStyles = () => (
+function GlobalStyles() {
+  return (
     <>
-        <BaseStyles />
-        <CustomStyles />
+      <BaseStyles />
+      <Global styles={customStyles} />
     </>
-)
+  );
+}
 
-export default GlobalStyles
+export default GlobalStyles;
